@@ -1,7 +1,7 @@
 .footer {
   background-color: var(--bg-spruce-deep);
   color: var(--ink-on-dark);
-  padding-block: clamp(3.5rem, 6vw, 4.75rem) 2rem;
+  padding-block: clamp(3rem, 6vw, 4.75rem) max(2rem, env(safe-area-inset-bottom));
   border-top: 1px solid var(--border-dark);
 }
 

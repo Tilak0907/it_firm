@@ -59,6 +59,9 @@
   font-weight: 800;
   letter-spacing: 0.03em;
   color: var(--ink-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .navbar__brand-sub {
@@ -68,6 +71,9 @@
   letter-spacing: 0.11em;
   color: var(--ink-muted);
   margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .navbar__nav {
@@ -163,10 +169,13 @@
   right: 0;
   bottom: 0;
   z-index: 120;
-  width: min(86vw, 360px);
+  width: min(88vw, 360px);
+  height: 100dvh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   background-color: var(--bg-spruce);
   color: var(--ink-on-dark);
-  padding: 1.5rem;
+  padding: max(1.25rem, env(safe-area-inset-top)) 1.35rem max(1.35rem, env(safe-area-inset-bottom));
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -271,6 +280,37 @@
 
 .mobile-drawer__meta-link:hover {
   color: var(--ink-on-dark);
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 66px;
+  }
+
+  .navbar__inner {
+    gap: 0.75rem;
+  }
+
+  .navbar__mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .navbar__brand-name {
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+  }
+
+  .navbar__brand-sub {
+    font-size: 0.58rem;
+    letter-spacing: 0.07em;
+  }
+
+  .navbar__toggle {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
 }
 
 @media (min-width: 1024px) {

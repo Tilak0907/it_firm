@@ -29,14 +29,17 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1.25rem 1.4rem;
+  min-height: 54px;
+  padding: 1.15rem 1.35rem;
   border: none;
   background: transparent;
   text-align: left;
-  font-size: 1rem;
+  font-size: 0.98rem;
   font-weight: 600;
+  line-height: 1.4;
   color: var(--ink-primary);
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .faq-chevron {
@@ -69,6 +72,18 @@
   font-size: 0.94rem;
   line-height: 1.7;
   color: var(--ink-secondary);
+}
+
+@media (max-width: 520px) {
+  .faq-trigger {
+    padding: 1rem 1.05rem;
+    font-size: 0.94rem;
+  }
+
+  .faq-panel__inner p {
+    padding: 0 1.05rem 1.1rem;
+    font-size: 0.9rem;
+  }
 }
 
 @media (min-width: 960px) {

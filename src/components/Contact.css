@@ -99,8 +99,8 @@
 }
 
 .copy-btn {
-  width: 34px;
-  height: 34px;
+  width: 38px;
+  height: 38px;
   border-radius: 8px;
   border: 1px solid var(--border-dark);
   background-color: rgba(255, 255, 255, 0.04);
@@ -109,6 +109,7 @@
   place-items: center;
   cursor: pointer;
   flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
   transition:
     background-color var(--transition-fast),
     color var(--transition-fast),
@@ -198,12 +199,12 @@
 .form-field select,
 .form-field textarea {
   width: 100%;
-  padding: 0.82rem 0.95rem;
+  padding: 0.85rem 0.95rem;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border-strong);
   background-color: var(--bg-porcelain);
   color: var(--ink-primary);
-  font-size: 0.94rem;
+  font-size: 1rem;
   transition:
     border-color var(--transition-fast),
     background-color var(--transition-fast),
@@ -292,6 +293,35 @@
 .contact-success__note a {
   color: var(--accent-copper);
   font-weight: 600;
+}
+
+@media (max-width: 520px) {
+  .contact-info,
+  .contact-form-card {
+    padding: 1.35rem 1.15rem;
+  }
+
+  .contact-item {
+    gap: 0.7rem;
+    padding: 0.85rem;
+  }
+
+  .contact-item__icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .contact-item__value,
+  .contact-item__link,
+  .contact-item__address {
+    font-size: 0.88rem;
+  }
+
+  .contact-info__footer .btn,
+  .contact-form__submit .btn,
+  .contact-success__actions .btn {
+    width: 100%;
+  }
 }
 
 @media (min-width: 600px) {

@@ -104,6 +104,7 @@
 
 .work-card__footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
@@ -303,5 +304,46 @@
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--bg-spruce);
+}
+
+@media (max-width: 560px) {
+  .work-card__banner {
+    padding: 0.95rem 1.2rem;
+  }
+
+  .work-card__body {
+    padding: 1.3rem 1.2rem 1.2rem;
+  }
+
+  .work-modal-backdrop {
+    padding: 0.65rem;
+    align-items: end;
+  }
+
+  .work-modal {
+    max-height: 92dvh;
+    border-radius: var(--radius-md);
+  }
+
+  .work-modal__header {
+    padding: 1.2rem 1.2rem;
+  }
+
+  .work-modal__title {
+    font-size: 1.15rem;
+  }
+
+  .work-modal__content {
+    padding: 1.2rem;
+    gap: 1.1rem;
+  }
+
+  .work-modal__footer {
+    padding: 1rem 1.2rem;
+  }
+
+  .work-modal__footer .btn {
+    width: 100%;
+  }
 }
 

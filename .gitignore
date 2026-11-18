@@ -3,6 +3,7 @@ node_modules/
 
 # Production build
 dist/
+.vercel/
 
 # Logs
 logs/
@@ -19,3 +20,6 @@ npm-debug.log*
 .idea/
 .DS_Store
 Thumbs.db
+
+
+.vercel

@@ -140,6 +140,16 @@
   color: var(--ink-primary);
 }
 
+@media (max-width: 520px) {
+  .corporate-card__header {
+    padding: 1.4rem 1.25rem;
+  }
+
+  .corporate-card__facts {
+    padding: 0.35rem 1.25rem 1.25rem;
+  }
+}
+
 @media (min-width: 960px) {
   .about-grid {
     grid-template-columns: 1.22fr 0.78fr;

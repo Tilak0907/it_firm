@@ -48,7 +48,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.48rem 0.95rem;
+  max-width: 100%;
+  padding: 0.45rem 0.9rem;
   border-radius: var(--radius-pill);
   background-color: rgba(13, 35, 32, 0.72);
   backdrop-filter: blur(10px);
@@ -57,9 +58,14 @@
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 500;
+  line-height: 1.35;
   letter-spacing: 0.05em;
   color: var(--accent-mint);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.35rem;
+}
+
+.hero__badge svg {
+  flex-shrink: 0;
 }
 
 .hero__title {
@@ -358,13 +364,103 @@
   }
 }
 
-@media (max-width: 520px) {
-  .hero__metrics {
-    grid-template-columns: 1fr 1fr;
+@media (max-width: 600px) {
+  .hero {
+    padding-block: 2.5rem 3.25rem;
+  }
+
+  .hero__banner-img {
+    object-position: 62% center;
+  }
+
+  .hero__badge {
+    font-size: 0.67rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .hero__title {
+    max-width: none;
+  }
+
+  .hero__description {
+    margin-top: 1.15rem;
+  }
+
+  .hero__ctas {
+    margin-top: 1.5rem;
   }
 
   .hero__ctas .btn {
     width: 100%;
+  }
+
+  .hero__metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-top: 2rem;
+    padding-top: 1.35rem;
+  }
+
+  .hero__metric-value {
+    font-size: 1rem;
+  }
+
+  .hero__metric-label {
+    font-size: 0.72rem;
+  }
+
+  .arch-console__header {
+    padding: 0.85rem 1rem;
+  }
+
+  .arch-console__canvas {
+    padding: 1rem;
+  }
+
+  .arch-node {
+    padding: 0.75rem 0.85rem;
+    gap: 0.7rem;
+  }
+
+  .arch-node__title {
+    font-size: 0.86rem;
+  }
+
+  .arch-console__detail {
+    padding: 0.85rem 0.9rem;
+  }
+
+  .arch-console__detail-top {
+    flex-wrap: wrap;
+    gap: 0.4rem 0.75rem;
+  }
+
+  .arch-console__footer {
+    padding: 0.75rem 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .arch-console__dots {
+    display: none;
+  }
+
+  .hero__metrics {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .hero__metric {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(245, 243, 238, 0.1);
+  }
+
+  .hero__metric:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
   }
 }
 
