@@ -1,0 +1,148 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4.5vw, 4rem);
+  align-items: start;
+}
+
+.about-story__lead {
+  margin-top: 1.35rem;
+  font-size: clamp(1.02rem, 0.98rem + 0.25vw, 1.14rem);
+  line-height: 1.7;
+  color: var(--ink-primary);
+}
+
+.about-story__body {
+  margin-top: 1rem;
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--ink-secondary);
+}
+
+.principles-list {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.principle-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.principle-item__num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-copper);
+  background-color: var(--accent-copper-soft);
+  padding: 0.35rem 0.55rem;
+  border-radius: 7px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.principle-item__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+  margin-bottom: 0.25rem;
+}
+
+.principle-item__desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--ink-secondary);
+}
+
+/* Corporate Profile Card */
+.corporate-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.corporate-card__header {
+  padding: 1.85rem 1.75rem;
+  background: linear-gradient(145deg, var(--bg-spruce) 0%, #163a35 100%);
+  color: var(--ink-on-dark);
+}
+
+.corporate-card__badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f0a887;
+  background-color: rgba(199, 98, 56, 0.2);
+  border: 1px solid rgba(199, 98, 56, 0.35);
+  padding: 0.28rem 0.65rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 0.95rem;
+}
+
+.corporate-card__name {
+  font-size: 1.28rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+}
+
+.corporate-card__type {
+  margin-top: 0.35rem;
+  font-size: 0.88rem;
+  color: var(--accent-mint);
+}
+
+.corporate-card__facts {
+  margin: 0;
+  padding: 0.5rem 1.75rem 1.5rem;
+}
+
+.corporate-fact {
+  padding-block: 1.05rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.corporate-fact:last-child {
+  border-bottom: none;
+  padding-bottom: 0.25rem;
+}
+
+.corporate-fact dt {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 0.4rem;
+}
+
+.corporate-fact dt svg {
+  color: var(--accent-copper);
+}
+
+.corporate-fact dd {
+  margin: 0;
+  font-size: 0.96rem;
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--ink-primary);
+}
+
+@media (min-width: 960px) {
+  .about-grid {
+    grid-template-columns: 1.22fr 0.78fr;
+  }
+}
+

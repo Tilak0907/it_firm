@@ -1,0 +1,117 @@
+.footer {
+  background-color: var(--bg-spruce-deep);
+  color: var(--ink-on-dark);
+  padding-block: clamp(3.5rem, 6vw, 4.75rem) 2rem;
+  border-top: 1px solid var(--border-dark);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding-bottom: 2.75rem;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.footer__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.98rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: var(--ink-on-dark);
+}
+
+.footer__mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background-color: var(--bg-spruce-elevated);
+  border: 1px solid var(--border-dark);
+  display: grid;
+  place-items: center;
+}
+
+.footer__about {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--ink-on-dark-muted);
+  max-width: 42ch;
+}
+
+.footer__heading {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-mint);
+  margin-bottom: 1rem;
+}
+
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem 1.5rem;
+}
+
+.footer__links a {
+  font-size: 0.9rem;
+  color: var(--ink-on-dark-muted);
+  transition: color var(--transition-fast);
+}
+
+.footer__links a:hover {
+  color: var(--ink-on-dark);
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer__contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--ink-on-dark-muted);
+}
+
+.footer__contact svg {
+  color: #e49573;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.footer__contact a:hover {
+  color: var(--ink-on-dark);
+}
+
+.footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding-top: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--ink-on-dark-muted);
+}
+
+.footer__owner {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+}
+
+@media (min-width: 820px) {
+  .footer__grid {
+    grid-template-columns: 1.35fr 0.75fr 1.1fr;
+    gap: 3rem;
+  }
+}
+

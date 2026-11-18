@@ -1,0 +1,307 @@
+.work__aside {
+  margin-top: 0;
+  max-width: 400px;
+  font-size: var(--text-base);
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 1.5rem;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.work-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-strong);
+}
+
+.work-card__banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.5rem;
+  background: linear-gradient(135deg, var(--bg-spruce) 0%, #153833 100%);
+  color: var(--ink-on-dark);
+}
+
+.work-card__category {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--accent-mint);
+}
+
+.work-card__index {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: rgba(245, 243, 238, 0.55);
+}
+
+.work-card__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1.65rem 1.5rem 1.45rem;
+}
+
+.work-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: var(--ink-primary);
+  margin-bottom: 0.8rem;
+}
+
+.work-card__summary {
+  font-size: 0.93rem;
+  line-height: 1.65;
+  color: var(--ink-secondary);
+  margin-bottom: 1.35rem;
+  flex-grow: 1;
+}
+
+.work-card__impact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--accent-copper-soft);
+  border-left: 3px solid var(--accent-copper);
+  margin-bottom: 1.35rem;
+}
+
+.work-card__impact-label {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-copper-hover);
+}
+
+.work-card__impact-value {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+}
+
+.work-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.work-card__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.work-card__stack span {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  background-color: var(--bg-porcelain);
+  padding: 0.25rem 0.55rem;
+  border-radius: 6px;
+}
+
+.work-card__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: none;
+  background: transparent;
+  color: var(--bg-spruce);
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.35rem 0.5rem;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.work-card__btn:hover {
+  color: var(--accent-copper);
+  background-color: var(--accent-copper-soft);
+}
+
+/* Modal */
+.work-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  background-color: rgba(8, 24, 22, 0.68);
+  backdrop-filter: blur(6px);
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+}
+
+.work-modal {
+  width: min(100%, 660px);
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-light);
+}
+
+.work-modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 1.75rem;
+  background-color: var(--bg-spruce);
+  color: var(--ink-on-dark);
+}
+
+.work-modal__eyebrow {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-mint);
+  margin-bottom: 0.35rem;
+}
+
+.work-modal__title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.work-modal__close {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid var(--border-dark);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--ink-on-dark);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.work-modal__close:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.work-modal__content {
+  padding: 1.65rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.work-modal__block h4 {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-copper);
+  margin-bottom: 0.45rem;
+}
+
+.work-modal__block p {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: var(--ink-secondary);
+}
+
+.work-modal__outcomes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.work-modal__outcomes li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  font-size: 0.92rem;
+  color: var(--ink-primary);
+}
+
+.work-modal__outcomes svg {
+  color: var(--accent-sage);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.work-modal__stack-bar {
+  padding: 1rem 1.15rem;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-porcelain);
+  border: 1px solid var(--border-light);
+}
+
+.work-modal__stack-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--ink-primary);
+  margin-bottom: 0.7rem;
+}
+
+.work-modal__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.work-modal__pills span {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  padding: 0.3rem 0.65rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  color: var(--ink-secondary);
+}
+
+.work-modal__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 1.75rem;
+  border-top: 1px solid var(--border-light);
+  background-color: var(--bg-porcelain);
+}
+
+.work-modal__impact-pill {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--bg-spruce);
+}
+

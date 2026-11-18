@@ -1,0 +1,99 @@
+.services__aside {
+  margin-top: 0;
+  max-width: 420px;
+  font-size: var(--text-base);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr));
+  gap: 1.35rem;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  box-shadow: var(--shadow-xs);
+  transition:
+    transform var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(199, 98, 56, 0.35);
+  box-shadow: var(--shadow-md);
+}
+
+.service-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.35rem;
+}
+
+.service-card__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background-color: var(--accent-sage-soft);
+  color: var(--bg-spruce);
+  display: grid;
+  place-items: center;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.service-card:hover .service-card__icon {
+  background-color: var(--bg-spruce);
+  color: var(--ink-on-dark);
+}
+
+.service-card__num {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-copper);
+  letter-spacing: 0.08em;
+}
+
+.service-card__title {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: -0.015em;
+  color: var(--ink-primary);
+  margin-bottom: 0.75rem;
+}
+
+.service-card__desc {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: var(--ink-secondary);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.service-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.service-card__tag {
+  font-family: var(--font-mono);
+  font-size: 0.71rem;
+  font-weight: 500;
+  color: var(--ink-secondary);
+  background-color: var(--bg-porcelain);
+  border: 1px solid var(--border-light);
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-pill);
+}
+
