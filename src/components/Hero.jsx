@@ -46,15 +46,15 @@ export function Hero() {
 
   return (
     <section id="top" className="hero">
-      <div className="hero__banner" aria-hidden="true">
+      <div className="hero__banner">
         <img
           src="/hero-banner.jpg"
-          alt=""
+          alt="Modern software engineering workstation displaying application code"
           className="hero__banner-img"
           loading="eager"
           decoding="async"
         />
-        <div className="hero__banner-overlay" />
+        <div className="hero__banner-overlay" aria-hidden="true" />
       </div>
 
       <div className="container hero__grid">
