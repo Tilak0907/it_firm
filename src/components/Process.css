@@ -8,6 +8,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  min-width: 0;
   padding: clamp(1.45rem, 2.4vw, 1.9rem);
   background-color: var(--bg-card);
   border: 1px solid var(--border-light);
