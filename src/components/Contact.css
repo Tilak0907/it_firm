@@ -332,8 +332,13 @@
 
 @media (min-width: 960px) {
   .contact-grid {
-    grid-template-columns: 0.92fr 1.08fr;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
     gap: 2rem;
+  }
+
+  .contact-info,
+  .contact-form-card {
+    min-width: 0;
   }
 }
 
